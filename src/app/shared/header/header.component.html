@@ -1,0 +1,20 @@
+<header class="fixed top-0 left-0 w-full flex justify-between items-center mb-8 p-6 text-black text-shadow-sm shadow-lg bg-white/20 z-50">
+  <!-- Logo -->
+  <div class="content-suntrans before:bg-center h-10 w-36"></div>
+
+  <!-- Navigation -->
+  <nav class="flex space-x-6">
+    <a href="home" class="hover:text-orange-500 transition">Ínicio</a>
+    <a href="onboarding" class="hover:text-orange-500 transition">Onboarding</a>
+    <a href="departamentos" class="hover:text-orange-500 transition">Departamentos</a>
+    <a href="social" class="hover:text-orange-500 transition">Social</a>
+  </nav>
+
+  <!-- User Profile -->
+  <div class="relative group">
+    <div class="flex items-center space-x-4 cursor-pointer">
+      <img src="/assets/user_profile.jpg" alt="User Photo" class="h-10 w-10 rounded-full">
+      <button (click)="redirectToUserProfile()" class="font-bold">Paulo Kunrath</button>
+    </div>
+  </div>
+</header>

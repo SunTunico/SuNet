@@ -1,0 +1,111 @@
+<div class="flex flex-row min-h-screen bg-social-bg bg-cover bg-center text-white">
+    <!-- Barra Lateral Esquerda -->
+    <aside class="w-1/5 bg-black/90 border-r border-gray-700 flex flex-col space-y-6 py-8 px-4">
+        <!-- Logo -->
+        <div class="flex justify-center mb-4">
+            <img src="/assets/suntrans.png" alt="Logo X"
+                class="h-10 w-auto">
+        </div>
+        <!-- Navegação -->
+        <nav class="flex flex-col space-y-4">
+            <a href="#" class="flex items-center text-gray-400 hover:text-white text-lg font-bold">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-4" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h3l3 3 3-6 3 3h3" />
+                </svg>
+                Home
+            </a>
+            <a href="#" class="flex items-center text-gray-400 hover:text-white text-lg font-bold">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-4" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+                Explorar
+            </a>
+            <a href="#" class="flex items-center text-gray-400 hover:text-white text-lg font-bold">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-4" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 10h16M4 14h16" />
+                </svg>
+                Notificações
+            </a>
+        </nav>
+        <!-- Botão Criar Post -->
+        <button
+            class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-full transition-all text-center">
+            Home
+        </button>
+    </aside>
+
+    <!-- Feed Principal -->
+    <main class="w-3/5 bg-black/80 flex flex-col gap-8 px-4 border-r border-gray-700">
+        <!-- Criar Postagem -->
+        <section class="flex items-start gap-4 py-4 border-b border-gray-700">
+            <img src="/assets/user_profile.jpg" alt="User Avatar" class="rounded-full h-12 w-12">
+            <div class="flex-1">
+                <textarea placeholder="O que está acontecendo?" rows="3"
+                    class="w-full bg-transparent text-white placeholder-gray-500 outline-none resize-none"></textarea>
+                <div class="flex justify-between items-center mt-4">
+                    <button class="bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-600 transition-all">
+                        Postar
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Postagens Existentes -->
+        <section class="flex flex-col gap-6">
+            <div class="border-b border-gray-700 pb-4">
+                <div class="flex items-start gap-4">
+                    <img src="/assets/user_profile.jpg" alt="User Avatar" class="rounded-full h-12 w-12">
+                    <div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-white font-bold">Usuário</span>
+                        </div>
+                        <p class="text-gray-300">
+                            Este é um exemplo de postagem no feed.
+                        </p>
+                        <div class="flex items-center gap-8 mt-4 text-gray-400">
+                            <button class="hover:text-blue-500 flex items-center">
+                                <span>💬</span>
+                                <span class="ml-2">12</span>
+                            </button>
+                            <button class="hover:text-green-500 flex items-center">
+                                <span>🔄</span>
+                                <span class="ml-2">3</span>
+                            </button>
+                            <button class="hover:text-red-500 flex items-center">
+                                <span>❤️</span>
+                                <span class="ml-2">120</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Barra Lateral Direita - Usuários Online -->
+    <aside class="w-1/5 bg-black/90 flex flex-col space-y-6 py-8 px-4 border-l border-gray-700">
+        <h2 class="text-xl font-bold text-white">Usuários Online</h2>
+        <ul class="flex-1 overflow-y-auto space-y-3">
+            <li *ngFor="let user of onlineUsers"
+                class="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-700 transition">
+                <img [src]="user.photo" alt="{{ user.name }} Photo"
+                    class="h-10 w-10 rounded-full border-2 border-blue-500">
+                <div>
+                    <span class="text-white font-semibold">{{ user.name }}</span>
+                    <div class="flex items-center space-x-2">
+                        <span class="h-2 w-2 rounded-full" [ngClass]="{
+                                  'bg-green-500': user.status === 'Disponível',
+                                  'bg-orange-500': user.status === 'Ausente',
+                                  'bg-red-500': user.status != 'Disponível' && 'Ausente'
+                              }">
+                        </span>
+                        <p class="text-gray-400 italic text-sm">{{ user.status }}</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </aside>
+</div>

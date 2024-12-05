@@ -1,0 +1,91 @@
+<div class="flex flex-col min-h-screen bg-component-bg bg-cover bg-center text-white">
+
+  <!-- Header (Fixo) -->
+  <app-header class="fixed top-0 left-0 w-full bg-white/70 backdrop-blur-md shadow-lg z-50"></app-header>
+
+  <!-- Compensar a altura do header -->
+  <div class="pt-40 bg-gradient-to-b from-black/20 to-black-90">
+
+    <!-- Hero Section -->
+    <section class="flex flex-col justify-center items-center text-center flex-grow px-6 max-w-6xl mx-auto">
+      <h1 class="text-4xl md:text-6xl font-extrabold uppercase mb-4 text-blue-800">
+        Explorando o futuro do <span class="text-white">Transporte</span>
+      </h1>
+      <p class="text-lg md:text-xl font-light mb-8 max-w-2xl text-blue-700">
+        Dos oceanos às estrelas, nosso compromisso é levá-lo a qualquer lugar com precisão, velocidade e segurança.
+      </p>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-12 px-6 mb-8 rounded-lg max-w-6xl mx-auto">
+      <div class="grid md:grid-cols-3 gap-6 mb-8">
+        <!-- Feature 1 -->
+        <div
+          class="text-center p-6 border border-transparent rounded-lg bg-white/10 hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+          <div class="text-3xl font-bold text-blue-800 mb-4">01</div>
+          <h3 class="text-xl font-semibold mb-2 text-orange-800">Global Reach</h3>
+          <p class="text-blue-700">
+            From the vastness of space to the last corners of the Earth, we take you there.
+          </p>
+        </div>
+        <!-- Feature 2 -->
+        <div
+          class="text-center p-6 border border-transparent rounded-lg bg-white/10 hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+          <div class="text-3xl font-bold text-blue-800 mb-4">02</div>
+          <h3 class="text-xl font-semibold mb-2 text-yellow-800">Sustainability</h3>
+          <p class="text-blue-700">
+            Our solutions are designed with a focus on environmental responsibility and innovation.
+          </p>
+        </div>
+        <!-- Feature 3 -->
+        <div
+          class="text-center p-6 border border-transparent rounded-lg bg-white/10 hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+          <div class="text-3xl font-bold text-blue-800 mb-4">03</div>
+          <h3 class="text-xl font-semibold mb-2 text-yellow-800">Future Innovation</h3>
+          <p class="text-blue-700">
+            Leading the way in groundbreaking technologies for ocean and beyond.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call-to-Action Section -->
+    <section class="py-16 px-6 text-center shadow-lg rounded-lg max-w-6xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold uppercase mb-6 text-blue-900">
+        Junte-se ao <span class="text-yellow-600">Futuro</span>
+      </h2>
+
+      <div class="mt-12 text-left max-w-3xl mx-auto text-blue-700">
+        <p class="mb-4">
+          <span class="text-white font-bold">Bem-vindo à Suntrans!</span> Estamos muito felizes em tê-lo como parte
+          de nossa equipe. Aqui na <span class="text-white font-bold">Suntrans</span>, valorizamos a inovação, o
+          trabalho em equipe e a excelência em tudo o que fazemos. Você está entrando em uma empresa onde cada pessoa
+          contribui de forma significativa para o nosso <span class="text-white font-bold">sucesso coletivo</span>, e
+          estamos ansiosos para ver como você vai agregar ao nosso time.
+        </p>
+        <p class="mb-4">
+          No vídeo de introdução que você acaba de assistir, apresentamos uma visão geral de quem somos, como operamos,
+          e
+          o que esperamos de nossos colaboradores. Este vídeo é o <span class="text-white font-bold">primeiro
+            passo</span> para integrá-lo ao nosso ambiente de trabalho, proporcionando uma introdução clara aos nossos
+          valores, às suas responsabilidades, e às ferramentas que você utilizará em sua jornada conosco.
+        </p>
+        <p class="mb-4">
+          Estamos aqui para apoiá-lo em cada etapa desse processo, e queremos que você saiba que a sua integração é uma
+          <span class="text-white font-bold">prioridade</span> para nós. Se tiver dúvidas ou precisar de qualquer
+          ajuda, não hesite em procurar sua equipe ou a liderança. Mais uma vez, seja bem-vindo à <span
+            class="text-white font-bold">Suntrans</span>, e vamos juntos construir um <span
+            class="text-white font-bold">futuro brilhante!</span>
+        </p>
+      </div>
+
+      <button routerLink="/onboarding"
+        class="bg-yellow-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-yellow-700 transition">
+        Get Started
+      </button>
+    </section>
+  </div>
+
+  <app-footer></app-footer>
+
+</div>
