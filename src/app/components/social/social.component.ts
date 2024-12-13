@@ -16,7 +16,7 @@ export class SocialComponent {
   posts = [
     {
       id: 1,
-      userName: 'Paulo Kunrath',
+      userName: 'User 1',
       userPhoto: 'assets/user_profile.jpg',
       content: 'Este é um exemplo de postagem.',
       timestamp: new Date(),
@@ -32,12 +32,12 @@ export class SocialComponent {
 
   onlineUsers: OnlineUser[] = [
     {
-      name: 'Nicolas Souza',
+      name: 'User 2',
       photo: '/assets/user_teste1.png',
       status: 'Disponível'
     },
     {
-      name: 'Rafa Canada',
+      name: 'User 3',
       photo: '/assets/user_teste2.png',
       status: 'Com o china'
     }
@@ -49,7 +49,7 @@ export class SocialComponent {
     }
     const newPost = {
       id: this.generateId(),
-      userName: 'Paulo Kunrath',
+      userName: 'User 1',
       userPhoto: 'assets/user_profile.jpg',
       content,
       timestamp: new Date(),
