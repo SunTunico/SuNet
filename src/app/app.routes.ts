@@ -25,7 +25,7 @@ export const routes: Routes = [
     {path: 'onboarding', component: OnboradingComponent},
     {path: 'usuario', component: UsuarioComponent},
     {path: 'social', component: SocialComponent},
-    { path: '**', component: NotFoundComponent},
-    { path: '', component: LoginComponent },
+    { path: '', component: LoginComponent, pathMatch: 'full' },
+    { path: '**', component: NotFoundComponent },
 
 ];
